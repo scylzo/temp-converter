@@ -1,9 +1,10 @@
 import { Text, TouchableOpacity } from "react-native";
+import Style from "./ConvertButton.style";
 
-const ConvertButton = () => {
+const ConvertButton = ({ unit, handleBtnConverter }) => {
   return (
-    <TouchableOpacity>
-      <Text>CC</Text>
+    <TouchableOpacity onPress={handleBtnConverter} style={Style.btnStyle}>
+      <Text style={Style.text}>Convertir en {unit}</Text>
     </TouchableOpacity>
   );
 };

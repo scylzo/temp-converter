@@ -14,4 +14,10 @@ const convertTempTo = (unit, value) => {
   }
 };
 
-export { getOppositUnit, convertTempTo };
+const isIceTemp = (unit, value) => {
+  if (unit === UNITS.celcius) {
+    return value <= 0;
+  } else return value <= 32;
+};
+
+export { getOppositUnit, convertTempTo, isIceTemp };
